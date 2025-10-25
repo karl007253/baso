@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍻 Round Robin Drinking App
+
+A fun Next.js app to manage drinking rounds with friends! Take turns, track drinks, and get notified when it's time for the next person.
+
+## Features
+
+- **Add/Remove People**: Easily manage your drinking group
+- **Round Robin Turns**: Automatically cycles through everyone
+- **Configurable Timer**: Set custom timer duration (default 2 minutes)
+- **Audio Notifications**: Beeps when time is up (with browser notification fallback)
+- **Drink Tracking**: See how many drinks each person has had
+- **Pause/Resume**: Control the timer as needed
+- **Reset Functionality**: Start fresh rounds
+- **Responsive Design**: Works on mobile and desktop
+
+## How to Use
+
+1. **Add People**: Enter names and click "Add" to build your drinking group
+2. **Set Timer**: Choose how long each person has (1-10 minutes)
+3. **Start Round**: Click "Start Round" to begin the timer
+4. **Take Turns**: When someone finishes their drink, click "🍻 Drank!" to advance
+5. **Timer Notifications**: The app will beep when time is up and auto-advance
+6. **Control**: Use Pause/Resume to control the flow, or Reset to start over
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Open http://localhost:3000 in your browser
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js 14+** with App Router
+- **TypeScript** for type safety
+- **Tailwind CSS** for styling
+- **React Hooks** for state management
+- **Web Audio API** for notifications
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Browser Compatibility
 
-## Learn More
+- Modern browsers with Web Audio API support
+- Mobile-friendly responsive design
+- Works offline (state resets on page refresh)
 
-To learn more about Next.js, take a look at the following resources:
+## Tips
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- The app requests notification permission for better alerts
+- Timer continues in background but may pause when tab is inactive
+- All data is stored in memory (resets on page refresh)
+- Use the "Reset" button to start a fresh round with everyone
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Enjoy responsibly! 🍻# baso
